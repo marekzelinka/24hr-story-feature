@@ -68,7 +68,7 @@ export function AddStoryButton({
       </Button>
       <span
         className={clsx(
-          "text-muted-foreground text-xs",
+          "text-muted-foreground min-w-18 text-center text-xs",
           isUploading ? "opacity-50" : "group-hover:text-foreground",
         )}
       >

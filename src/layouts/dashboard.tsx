@@ -1,4 +1,4 @@
-import { StoryManager } from "@/components/story-manager";
+import { StoriesManager } from "@/components/stories-manager";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function Dashboard() {
@@ -8,10 +8,12 @@ export function Dashboard() {
         <div className="flex min-h-svh flex-col [&>*]:flex-1">
           <Card className="ring-border rounded-none border-none ring-1">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold">Stories</CardTitle>
+              <CardTitle asChild className="text-2xl font-bold">
+                <h1>Stories</h1>
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <StoryManager />
+              <StoriesManager />
             </CardContent>
           </Card>
         </div>

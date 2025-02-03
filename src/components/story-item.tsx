@@ -3,12 +3,21 @@ import type { Story } from "@/types";
 import clsx from "clsx";
 import { Button } from "./ui/button";
 
-export function StoryItem({ story }: { story: Story }) {
+export function StoryItem({
+  story,
+  index,
+  onClick,
+}: {
+  story: Story;
+  index: number;
+  onClick: () => void;
+}) {
   return (
     <div className="group relative flex flex-col items-center gap-1">
       <Button
         type="button"
         size="icon"
+        onClick={onClick}
         className={clsx(
           // Reset some default styling
           "bg-transparent hover:bg-transparent",
@@ -20,7 +29,7 @@ export function StoryItem({ story }: { story: Story }) {
         <span className="absolute inset-x-0 -top-px bottom-0" />
         <img
           src={story.imageUrl}
-          alt=""
+          alt={`Story ${index + 1}`}
           className={clsx(
             "aspect-square rounded-full object-cover transition-transform",
             // Make the image smaller to create a offset
