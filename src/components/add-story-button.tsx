@@ -68,8 +68,8 @@ export function AddStoryButton({
       </Button>
       <span
         className={clsx(
-          "text-muted-foreground group-hover:text-foreground text-xs",
-          isUploading ? "opacity-50" : "",
+          "text-muted-foreground text-xs",
+          isUploading ? "opacity-50" : "group-hover:text-foreground",
         )}
       >
         {isUploading ? "Uploading…" : "Add Story"}
